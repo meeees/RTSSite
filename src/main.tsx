@@ -1,11 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-// import App from './App.tsx'
-import Kyle from './Kyle.tsx'
-import './index.css'
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  RouterProvider,
+} from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import {router} from './core/Routes';
+
+
+import './index.css'
+import 'normalize.css/normalize.css'
+import '@blueprintjs/core/lib/css/blueprint.css'
+import '@blueprintjs/icons/lib/css/blueprint-icons.css'
+
+
+ReactDOM.createRoot(document.getElementById('root') as ReactDOM.Container).render(
   <React.StrictMode>
-    <Kyle />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);

@@ -6,11 +6,12 @@ import { useState } from "react";
 function Kyle() {
 
   const [isOpen, setOpen] = useState(false);
+
   return (
     <OverlaysProvider>
     <div>
     <h1>Building Website</h1>
-    <Spinner intent={Intent.DANGER} size={400}/>
+    <Spinner intent={Intent.DANGER} size={200} />
     <br/>
     <Button text="Where Website?" onClick={() => setOpen(true)} large={true}/>
     <Dialog isOpen={isOpen} onClose={() => setOpen(false)}>
