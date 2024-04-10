@@ -1,7 +1,10 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
-import Kyle from "../Kyle";
+// import Kyle from "../Kyle";
 import Player from "../players/Player";
 import RTSNav from "./Navbar";
+import Ladder from "../players/Ladder";
+import PlayerStats from "../players/Stats";
+import Kyle from "../Kyle";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +19,14 @@ export const router = createBrowserRouter([
     path: 'players',
     element: <Player />,
   },
+  {
+    path: 'ladder',
+    element: <Ladder />
+  },
+  {
+    path: 'stats',
+    element: <PlayerStats />
+  }
   ]
 }
 ],
