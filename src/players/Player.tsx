@@ -1,9 +1,11 @@
+import { Button } from "@mui/material"
+
 function Player() {
 
   return (
-    <div className="flex bg-black">
+    <Button className="flex bg-red-50 border">
       Hello World
-    </div>
+    </Button>
   )
 }
 
