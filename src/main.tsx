@@ -6,15 +6,15 @@ import {
 
 import {router} from './core/Routes';
 
-
-import './index.css'
-import 'normalize.css/normalize.css'
-import '@blueprintjs/core/lib/css/blueprint.css'
-import '@blueprintjs/icons/lib/css/blueprint-icons.css'
+import { CssBaseline, StyledEngineProvider } from '@mui/material';
 
 
 ReactDOM.createRoot(document.getElementById('root') as ReactDOM.Container).render(
+  
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CssBaseline/>
+    <StyledEngineProvider injectFirst>
+      <RouterProvider router={router} />
+    </StyledEngineProvider>
   </React.StrictMode>
 );
